@@ -131,7 +131,7 @@ $(function(){
     }
     keypress_counter += 1;
     $('#keypresslog').append("<tr><td>" + keypress_counter + "</td><td>Key Down</td><td><kbd>" + keyCodes[event.which] + "</kbd></td><td>" + event.which + "</td><td>" + event.timeStamp + "</td></tr>");
-    $('body').scrollTop($('#keypresslog')[0].scrollHeight);
+    $(window).scrollTop($('#keypresslog')[0].scrollHeight);
   });
   $('body').keyup(function (event) {
     if( !event.metaKey ) {
@@ -139,7 +139,7 @@ $(function(){
     }
     keypress_counter += 1;
     $('#keypresslog').append("<tr><td>" + keypress_counter + "</td><td>Key Up</td><td><kbd>" + keyCodes[event.which] + "</kbd></td><td>" + event.which + "</td><td>" + event.timeStamp + "</td></tr>");
-    $('body').scrollTop($('#keypresslog')[0].scrollHeight);
+    $(window).scrollTop($('#keypresslog')[0].scrollHeight);
   });
   $('#reset-button').click(function () {
     keypress_counter = 0;
