@@ -12,22 +12,23 @@
     <h1> Start typing on your keyboard </h1>
     <div class="row">
       <div class="col-xs-12">
-        <div class="well" id="keypresslog">
+        <div class="well">
           <table class="table table-striped">
             <thead>
-              <th>
-                <td>#</td>
-                <td>Event</td>
-                <td>Key</td>
-                <td>KeyCode</td>
-                <td>Timestamp</td>
-              </th>
+              <tr>
+                <th>#</th>
+                <th>Event</th>
+                <th>Key</th>
+                <th>KeyCode</th>
+                <th>Timestamp</th>
+              </tr>
             </thead>
             <tbody id="keypresslog">
             </tbody>
           </table>
         </div>
         <button class="btn btn-primary" id="reset-button">Reset</button>
+        <a class="btn btn-default" id="refresh-button" onclick="history.go(0);">Refresh</a>
       </div>
     </div>
   </div>
