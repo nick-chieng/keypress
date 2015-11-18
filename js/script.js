@@ -130,12 +130,12 @@ $(function(){
       e.preventDefault();
     }
     keypress_counter += 1;
-    $('#keypresslog').append("<p>" + keypress_counter + " Key Down Event: <kbd>" + keyCodes[event.which] + "</kbd> At: " + event.timeStamp + "</p>");
+    $('#keypresslog').append("<p>" + keypress_counter + " Key Down <kbd>" + keyCodes[event.which] + "</kbd> Keycode: " + event.which + " At: " + event.timeStamp + "</p>");
     $('body').scrollTop($('#keypresslog')[0].scrollHeight);
   });
   $('body').keyup(function (event) {
     keypress_counter += 1;
-    $('#keypresslog').append("<p>" + keypress_counter + " Key Up Event: <kbd>" + keyCodes[event.which] + "</kbd> At: " + event.timeStamp + "</p>");
+    $('#keypresslog').append("<p>" + keypress_counter + " Key Up <kbd>" + keyCodes[event.which] + "</kbd> Keycode: " + event.which + " At: " + event.timeStamp + "</p>");
     $('body').scrollTop($('#keypresslog')[0].scrollHeight);
   });
   $('#reset-button').click(function () {
