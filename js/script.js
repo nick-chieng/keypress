@@ -142,6 +142,7 @@ $(function(){
     $('body').scrollTop($('#keypresslog')[0].scrollHeight);
   });
   $('#reset-button').click(function () {
+    keypress_counter = 0;
     $('#keypresslog').html('');
   })
 });
