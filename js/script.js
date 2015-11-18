@@ -126,14 +126,17 @@ var keyCodes = {
 var keypress_counter = 0;
 $(function(){
   $('body').keydown(function (event) {
-   if( !e.metaKey ) {
-      e.preventDefault();
+    if( !event.metaKey ) {
+      event.preventDefault();
     }
     keypress_counter += 1;
     $('#keypresslog').append("<p>" + keypress_counter + " Key Down <kbd>" + keyCodes[event.which] + "</kbd> Keycode: " + event.which + " At: " + event.timeStamp + "</p>");
     $('body').scrollTop($('#keypresslog')[0].scrollHeight);
   });
   $('body').keyup(function (event) {
+    if( !event.metaKey ) {
+      event.preventDefault();
+    }
     keypress_counter += 1;
     $('#keypresslog').append("<p>" + keypress_counter + " Key Up <kbd>" + keyCodes[event.which] + "</kbd> Keycode: " + event.which + " At: " + event.timeStamp + "</p>");
     $('body').scrollTop($('#keypresslog')[0].scrollHeight);
